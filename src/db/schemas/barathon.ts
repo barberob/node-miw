@@ -8,6 +8,7 @@
 // }
 import { Schema } from 'mongoose';
 import { ICustomSchema } from '../../types/database';
+import { Comment } from './comment'
 
 
 const barathonSchema: ICustomSchema = {
@@ -15,7 +16,8 @@ const barathonSchema: ICustomSchema = {
     definition : new Schema({
         name : { type: String, required: true },
         author : { type: String, required: true },
-        checkPoints : { type : [String], required : true }
+        checkpoints : { type : [String], required : true },
+        comments : { type: [Comment], required : false}
     })
 };
 

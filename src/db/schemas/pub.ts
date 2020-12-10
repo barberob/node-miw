@@ -1,14 +1,9 @@
 import { Schema } from 'mongoose';
 import { ICustomSchema } from '../../types/database';
+import {Comment} from './comment'
 
 
 
-const Comment: Schema = new Schema({
-    text  : { type : String , required: true},
-    author: { type : String , required: true},
-    date  : { type : String , required: true},
-    rating: { type : Number , required: true}
-})
 
 const pubSchema : ICustomSchema = {
     collection : 'pubs',
