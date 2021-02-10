@@ -19,11 +19,13 @@ const startServer = async (): Promise<void> => {
 
     await initDB();
 
+    routes(app);
+
+    
     app.listen(process.env.PORT, () => {
         console.log(`Server listening on port ${process.env.PORT}`); 
     });
     
-    routes(app);
 }
 
 startServer();
